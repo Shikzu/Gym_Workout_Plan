@@ -12,9 +12,9 @@ export default function GymSimulator() {
   // Updated with educational/embed-friendly Video IDs and Alternate Free Weight exercises with their own videos
   const workoutPlan = {
     day1: {
-      title: "Day 1: Chest & Back",
-      focus: "Upper Body Power (Push/Pull)",
-      description: "Alternating between pushing (Chest) and pulling (Back) exercises to maximize strength and recovery.",
+      title: "Day 1: Chest & Triceps",
+      focus: "Push Strength",
+      description: "Combining chest and triceps allows you to fully exhaust the pushing muscles in one session.",
       exercises: [
         {
           name: "Machine Chest Press",
@@ -38,24 +38,23 @@ export default function GymSimulator() {
           }
         },
         {
-          name: "Lat Pulldown",
-          equipment: "Life Fitness Pulldown Station",
+          name: "Dumbbell Bench Press",
+          equipment: "Flat Bench + Dumbbells",
           sets: "3",
           reps: "10-12",
-          videoId: "AOpi-p0cJkc", // SilverSneakers
+          videoId: "X3YrlBmjWrY",
           tips: [
-            "Grip the bar wider than shoulder-width.",
-            "Keep your chest up and lean back slightly (very slightly).",
-            "Pull the bar down towards your upper chest, not your lap.",
-            "Control the weight on the way up; don't let it yank you."
+            "Lie flat on the bench with feet firm on the ground.",
+            "Lower dumbbells to mid-chest level.",
+            "Press up and slightly in, but don't clang weights together."
           ],
-          mindMuscle: "Imagine pulling your elbows down into your back pockets to engage the lats.",
-          type: "machine",
+          mindMuscle: "Feel the stretch at the bottom and the contraction at the top.",
+          type: "free_weight",
           alternate: {
-            name: "Dumbbell Pullovers",
-            equipment: "Bench + 1 Heavy Dumbbell",
-            guide: "Lie across a bench (upper back only). Hold dumbbell with both hands over chest, lower it behind your head to stretch lats, then pull back over.",
-            videoId: "p8YM5plSRfw"
+            name: "Pushups",
+            equipment: "Bodyweight",
+            guide: "Standard pushups. Keep core tight and back straight.",
+            videoId: "IODxDxX7oi4"
           }
         },
         {
@@ -79,6 +78,54 @@ export default function GymSimulator() {
           }
         },
         {
+          name: "Overhead Tricep Extension",
+          equipment: "Dumbbell",
+          sets: "3",
+          reps: "12-15",
+          videoId: "b_r_LW4HEcM",
+          tips: [
+            "Hold one dumbbell with both hands above your head.",
+            "Lower the weight behind your head by bending elbows.",
+            "Keep elbows pointing forward, not flaring out."
+          ],
+          mindMuscle: "Feel the stretch in the back of your arm.",
+          type: "free_weight",
+          alternate: {
+            name: "Tricep Bench Dips",
+            equipment: "Bench",
+            guide: "Hands on bench behind you, legs straight out. Lower hips towards floor and push back up.",
+            videoId: "0326dy_-CzM"
+          }
+        }
+      ]
+    },
+    day2: {
+      title: "Day 2: Back & Biceps",
+      focus: "Pull Strength",
+      description: "A classic 'Pull' day focusing on the lats, upper back, and biceps.",
+      exercises: [
+        {
+          name: "Lat Pulldown",
+          equipment: "Life Fitness Pulldown Station",
+          sets: "3",
+          reps: "10-12",
+          videoId: "AOpi-p0cJkc", // SilverSneakers
+          tips: [
+            "Grip the bar wider than shoulder-width.",
+            "Keep your chest up and lean back slightly (very slightly).",
+            "Pull the bar down towards your upper chest, not your lap.",
+            "Control the weight on the way up; don't let it yank you."
+          ],
+          mindMuscle: "Imagine pulling your elbows down into your back pockets to engage the lats.",
+          type: "machine",
+          alternate: {
+            name: "Dumbbell Pullovers",
+            equipment: "Bench + 1 Heavy Dumbbell",
+            guide: "Lie across a bench (upper back only). Hold dumbbell with both hands over chest, lower it behind your head to stretch lats, then pull back over.",
+            videoId: "p8YM5plSRfw"
+          }
+        },
+        {
           name: "Seated Row",
           equipment: "Life Fitness Row Station",
           sets: "3",
@@ -97,13 +144,73 @@ export default function GymSimulator() {
             guide: "Hinge at hips, keep back flat. Pull dumbbells to hips. Can be done one arm at a time using a bench for support.",
             videoId: "6TSP1TRMUzs"
           }
+        },
+        {
+          name: "Renegade Rows",
+          equipment: "Dumbbells",
+          sets: "3",
+          reps: "10 per side",
+          videoId: "ZMW_vIWH5D8",
+          tips: [
+            "Start in pushup position holding dumbbells.",
+            "Row one dumbbell up to your hip while balancing on the other.",
+            "Keep hips square to the ground; don't twist excessively."
+          ],
+          mindMuscle: "Core stability and back strength.",
+          type: "free_weight",
+          alternate: {
+            name: "Plank Rows (No weight)",
+            equipment: "Mat",
+            guide: "Perform the rowing motion without weight to practice stability.",
+            videoId: "Q28cLuweLv4"
+          }
+        },
+        {
+          name: "Dumbbell Bicep Curls",
+          equipment: "Dumbbells",
+          sets: "3",
+          reps: "12",
+          videoId: "ykJmrZ5v0Oo", // Howcast
+          tips: [
+            "Stand with feet shoulder-width apart.",
+            "Keep elbows glued to your sides.",
+            "Rotate palms up as you lift."
+          ],
+          mindMuscle: "Squeeze the bicep hard at the top; control the drop.",
+          type: "free_weight",
+          alternate: {
+            name: "Barbell Curls",
+            equipment: "Barbell",
+            guide: "Hold barbell with underhand grip. Curl up keeping elbows fixed. More stability allows for slightly heavier weight.",
+            videoId: "dDI8ClxRS04"
+          }
+        },
+        {
+          name: "Hammer Curls",
+          equipment: "Dumbbells",
+          sets: "3",
+          reps: "12",
+          videoId: "8XLxfXROrTo",
+          tips: [
+            "Hold dumbbells with palms facing your body (neutral grip).",
+            "Curl up without rotating your wrists.",
+            "Keep elbows tucked in."
+          ],
+          mindMuscle: "Target the side of the arm and forearm.",
+          type: "free_weight",
+          alternate: {
+            name: "Cross Body Hammer Curl",
+            equipment: "Dumbbells",
+            guide: "Curl the dumbbell across your chest towards the opposite shoulder.",
+            videoId: "BRVDS6HVR9Q"
+          }
         }
       ]
     },
-    day2: {
-      title: "Day 2: Arms & Shoulders",
-      focus: "Biceps, Triceps, Delts",
-      description: "A dedicated session to build arm size and shoulder width. We mix biceps and triceps to keep the arms pumped.",
+    day3: {
+      title: "Day 3: Shoulders & Abs",
+      focus: "Delts & Core",
+      description: "Building shoulder width (delts) and strengthening the core.",
       exercises: [
         {
           name: "Dumbbell Shoulder Press",
@@ -146,71 +253,71 @@ export default function GymSimulator() {
           }
         },
         {
-          name: "Dumbbell Bicep Curls",
-          equipment: "Dumbbells",
+          name: "Life Fitness Rear Delt Fly",
+          equipment: "Life Fitness Fly/Rear Delt Machine",
           sets: "3",
-          reps: "12",
-          videoId: "ykJmrZ5v0Oo", // Howcast
+          reps: "15",
+          videoId: "wTFl5y8ll00", // Rear delt specific
           tips: [
-            "Stand with feet shoulder-width apart.",
-            "Keep elbows glued to your sides.",
-            "Rotate palms up as you lift."
+            "Face the machine (chest against pad).",
+            "Adjust handles for rear delt (usually inner setting).",
+            "Pull arms back keeping them straight."
           ],
-          mindMuscle: "Squeeze the bicep hard at the top; control the drop.",
-          type: "free_weight",
+          mindMuscle: "Squeeze the back of your shoulders.",
+          type: "machine",
           alternate: {
-            name: "Barbell Curls",
-            equipment: "Barbell",
-            guide: "Hold barbell with underhand grip. Curl up keeping elbows fixed. More stability allows for slightly heavier weight.",
-            videoId: "dDI8ClxRS04"
+            name: "Bent Over Reverse Flys",
+            equipment: "Light Dumbbells",
+            guide: "Hinge at hips. Raise arms out to the sides like wings, squeezing rear shoulders.",
+            videoId: "W_hNkKhtSJg"
           }
         },
         {
-          name: "Overhead Tricep Extension",
-          equipment: "Dumbbell",
+          name: "Plank",
+          equipment: "Mat",
           sets: "3",
-          reps: "12-15",
-          videoId: "b_r_LW4HEcM",
+          reps: "45-60 sec",
+          videoId: "pSHjTRCQxIw",
           tips: [
-            "Hold one dumbbell with both hands above your head.",
-            "Lower the weight behind your head by bending elbows.",
-            "Keep elbows pointing forward, not flaring out."
+            "Forearms on ground, elbows under shoulders.",
+            "Body in straight line from head to heels.",
+            "Don't let hips sag."
           ],
-          mindMuscle: "Feel the stretch in the back of your arm.",
-          type: "free_weight",
+          mindMuscle: "Pull belly button to spine to engage core.",
+          type: "bodyweight",
           alternate: {
-            name: "Standing Tricep Extension",
-            equipment: "Dumbbell",
-            guide: "Same movement, but performed while standing for more core engagement.",
-            videoId: "xbNm9fRoUTw"
+            name: "Hanging Leg Raises",
+            equipment: "Pull-up Bar",
+            guide: "Hang from bar, lift legs up to 90 degrees.",
+            videoId: "Nw0LOKe3_l8"
           }
         },
         {
-          name: "Hammer Curls",
-          equipment: "Dumbbells",
+          name: "Crunches",
+          equipment: "Mat",
           sets: "3",
-          reps: "12",
-          videoId: "8XLxfXROrTo",
+          reps: "15-20",
+          videoId: "Xyd_fa5zoEU",
           tips: [
-            "Hold dumbbells with palms facing your body (neutral grip).",
-            "Curl up without rotating your wrists.",
-            "Keep elbows tucked in."
+            "Lower back pressed into floor.",
+            "Lift shoulder blades off the floor.",
+            "Don't pull on your neck."
           ],
-          mindMuscle: "Target the side of the arm and forearm.",
-          type: "free_weight",
+          mindMuscle: "Contract abs to lift, don't use momentum.",
+          type: "bodyweight",
           alternate: {
-            name: "Cross Body Hammer Curl",
-            equipment: "Dumbbells",
-            guide: "Curl the dumbbell across your chest towards the opposite shoulder.",
-            videoId: "BRVDS6HVR9Q"
+            name: "Cable Crunches",
+            equipment: "Cable Machine + Rope",
+            guide: "Kneel facing cable stack. Pull rope down by contracting abs.",
+            videoId: "0KEP6A1deBE"
           }
         }
       ]
     },
-    day3: {
-      title: "Day 3: Legs",
-      focus: "Leg Strength & Stability",
-      description: "Utilizing the Life Fitness Leg Press and isolation machines to build a strong foundation.",
+    day4: {
+      title: "Day 4: Legs",
+      focus: "Leg Strength",
+      description: "A heavy lower body day using machines for stability and free weights for range of motion.",
       exercises: [
         {
           name: "Leg Press",
@@ -274,73 +381,6 @@ export default function GymSimulator() {
           }
         },
         {
-          name: "Walking Lunges",
-          equipment: "Bodyweight or Dumbbells",
-          sets: "3",
-          reps: "10 per leg",
-          videoId: "7p6Fq7yXgK8", // Educational
-          tips: [
-            "Step forward and lower hips until both knees are bent at 90 degrees.",
-            "Keep front knee directly above ankle.",
-            "Keep torso upright."
-          ],
-          mindMuscle: "Feel the stretch in the trailing leg and power in the front leg.",
-          type: "free_weight",
-          alternate: {
-            name: "Reverse Lunges (Stationary)",
-            equipment: "Dumbbells",
-            guide: "Instead of walking forward, step one foot backward, lower down, and return to standing. Easier on knees.",
-            videoId: "D7KaRcCIQms"
-          }
-        }
-      ]
-    },
-    day4: {
-      title: "Day 4: Full Body",
-      focus: "Stamina & Conditioning",
-      description: "A high-energy mix of compound movements to build heart health and full body endurance.",
-      exercises: [
-        {
-          name: "Dumbbell Thrusters",
-          equipment: "Dumbbells",
-          sets: "3",
-          reps: "12",
-          videoId: "pHHef7UAnR8",
-          tips: [
-            "Hold dumbbells at shoulders. Squat down.",
-            "Explode up and press dumbbells overhead in one motion.",
-            "Use your leg power to help lift the weight."
-          ],
-          mindMuscle: "Full body explosive power.",
-          type: "free_weight",
-          alternate: {
-            name: "Wall Balls (or Med Ball Thruster)",
-            equipment: "Medicine Ball",
-            guide: "Squat holding ball, throw it up against a wall/target, catch and repeat.",
-            videoId: "M5gEwLTtWbg"
-          }
-        },
-        {
-          name: "Renegade Rows",
-          equipment: "Dumbbells",
-          sets: "3",
-          reps: "10 per side",
-          videoId: "ZMW_vIWH5D8",
-          tips: [
-            "Start in pushup position holding dumbbells.",
-            "Row one dumbbell up to your hip while balancing on the other.",
-            "Keep hips square to the ground; don't twist excessively."
-          ],
-          mindMuscle: "Core stability and back strength.",
-          type: "free_weight",
-          alternate: {
-            name: "Plank Rows (No weight)",
-            equipment: "Mat",
-            guide: "Perform the rowing motion without weight to practice stability.",
-            videoId: "Q28cLuweLv4"
-          }
-        },
-        {
           name: "Dumbbell Deadlift",
           equipment: "Dumbbells",
           sets: "3",
@@ -361,43 +401,23 @@ export default function GymSimulator() {
           }
         },
         {
-          name: "Step-Ups",
-          equipment: "Bench + Dumbbells",
+          name: "Walking Lunges",
+          equipment: "Bodyweight or Dumbbells",
           sets: "3",
-          reps: "12 per leg",
-          videoId: "dDvMJbxAPuo",
+          reps: "10 per leg",
+          videoId: "7p6Fq7yXgK8", // Educational
           tips: [
-            "Step onto bench with one foot.",
-            "Drive through the heel to lift body up.",
-            "Step down carefully."
+            "Step forward and lower hips until both knees are bent at 90 degrees.",
+            "Keep front knee directly above ankle.",
+            "Keep torso upright."
           ],
-          mindMuscle: "Glute and quad focus.",
+          mindMuscle: "Feel the stretch in the trailing leg and power in the front leg.",
           type: "free_weight",
           alternate: {
-            name: "Box Jumps",
-            equipment: "Box",
-            guide: "Jump onto box with soft landing. Stand tall, step down.",
-            videoId: "v9cZQqGX1Xk"
-          }
-        },
-        {
-          name: "Plank",
-          equipment: "Mat",
-          sets: "3",
-          reps: "45-60 sec",
-          videoId: "pSHjTRCQxIw",
-          tips: [
-            "Forearms on ground, elbows under shoulders.",
-            "Body in straight line from head to heels.",
-            "Don't let hips sag."
-          ],
-          mindMuscle: "Pull belly button to spine to engage core.",
-          type: "bodyweight",
-          alternate: {
-            name: "Hanging Leg Raises",
-            equipment: "Pull-up Bar",
-            guide: "Hang from bar, lift legs up to 90 degrees.",
-            videoId: "Nw0LOKe3_l8"
+            name: "Reverse Lunges (Stationary)",
+            equipment: "Dumbbells",
+            guide: "Instead of walking forward, step one foot backward, lower down, and return to standing. Easier on knees.",
+            videoId: "D7KaRcCIQms"
           }
         }
       ]
